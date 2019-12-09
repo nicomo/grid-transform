@@ -1,0 +1,84 @@
+[{
+  "uid": "_:grid.17689.31",
+  "dgraph.type": "Institute",
+  "name": "New Sorbonne University",
+  "wikipedia_url": "http://en.wikipedia.org/wiki/University_of_Paris_III:_Sorbonne_Nouvelle",
+  "link": "http://www.univ-paris3.fr/",
+  "location": {
+    "type": "Point",
+    "coordinates": [48.839792, 2.353902]
+  },
+  "city": "Paris",
+  "country": "France",
+  "country_code": "FR",
+  "geonames_city": "2988507",
+  "label@fr": "Université de la Sorbonne Nouvelle",
+  "status": "active",
+  "established": 1971,
+  "child": [{
+    "uid": "_:grid.503120.5"
+  }],
+  "xids": [{
+      "source": "ISNI",
+      "xid": "0000 0004 1937 060X"
+    },
+    {
+      "source": "Wikidata",
+      "xid": "Q571293"
+    },
+    {
+      "source": "ROR",
+      "xid": "https://ror.org/03z6jp965"
+    },
+    {
+      "source": "GRID",
+      "xid": "grid.17689.31"
+    }
+  ]
+},
+{
+  "uid": "_:grid.503120.5",
+  "dgraph.type": "Institute",
+  "name": "Centre de Recherche et de Documentation sur les Amériques",
+  "link": "http://www.iheal.univ-paris3.fr/",
+  "acronyms": ["CREDA"],
+  "location": {
+    "type": "Point",
+    "coordinates": [48.854517, 2.328241]
+  },
+  "city": "Paris",
+  "country": "France",
+  "country_code": "FR",
+  "geonames_city": "2988507",
+  "status": "active",
+  "established": 2010,
+  "parent": [{
+      "uid": "_:grid.457014.3"
+    },
+    {
+      "uid": "_:grid.17689.31"
+    }
+  ],
+  "xids": [{
+      "source": "ISNI",
+      "xid": "0000 0001 2203 8630"
+    },
+    {
+      "source": "CNRS",
+      "xid": "UMR7227"
+    },
+    {
+      "source": "Wikidata",
+      "xid": "Q59353705"
+    },
+    {
+      "source": "ROR",
+      "xid": "https://ror.org/0585hkk81"
+    },
+    {
+      "source": "GRID",
+      "xid": "grid.503120.5"
+    }
+  ]
+}
+]

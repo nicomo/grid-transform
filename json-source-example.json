@@ -1,0 +1,200 @@
+[{
+    "name": "Centre de Recherche et de Documentation sur les Amériques",
+    "wikipedia_url": "",
+    "email_address": null,
+    "links": ["http://www.iheal.univ-paris3.fr/"],
+    "aliases": [],
+    "acronyms": ["CREDA"],
+    "types": ["Facility"],
+    "ip_addresses": [],
+    "addresses": [{
+        "line_1": "",
+        "line_2": "",
+        "line_3": null,
+        "lat": 48.854517,
+        "lng": 2.328241,
+        "postcode": "",
+        "primary": false,
+        "city": "Paris",
+        "state": null,
+        "state_code": "",
+        "country": "France",
+        "country_code": "FR",
+        "geonames_city": {
+            "id": 2988507,
+            "city": "Paris",
+            "nuts_level1": {
+                "name": "ÎLE DE FRANCE",
+                "code": "FR1"
+            },
+            "nuts_level2": {
+                "name": "Île de France",
+                "code": "FR10"
+            },
+            "nuts_level3": {
+                "name": "Paris",
+                "code": "FR101"
+            },
+            "geonames_admin1": {
+                "name": "Île-de-France",
+                "ascii_name": "Ile-de-France",
+                "code": "FR.11"
+            },
+            "geonames_admin2": {
+                "name": "Paris",
+                "ascii_name": "Paris",
+                "code": "FR.11.75"
+            },
+            "license": {
+                "attribution": "Data from geonames.org under a CC-BY 3.0 license",
+                "license": "http://creativecommons.org/licenses/by/3.0/"
+            }
+        }
+    }],
+    "labels": [],
+    "id": "grid.503120.5",
+    "status": "active",
+    "established": 2010,
+    "relationships": [{
+        "type": "Parent",
+        "label": "Institut des sciences humaines et sociales",
+        "id": "grid.457014.3"
+    }, {
+        "type": "Parent",
+        "label": "New Sorbonne University",
+        "id": "grid.17689.31"
+    }],
+    "external_ids": {
+        "ISNI": {
+            "preferred": null,
+            "all": ["0000 0001 2203 8630"]
+        },
+        "CNRS": {
+            "preferred": null,
+            "all": ["UMR7227"]
+        },
+        "Wikidata": {
+            "preferred": null,
+            "all": ["Q59353705"]
+        },
+        "ROR": {
+            "preferred": "https://ror.org/0585hkk81",
+            "all": ["https://ror.org/0585hkk81"]
+        }
+    },
+    "weight": 1
+},
+{
+    "name": "New Sorbonne University",
+    "wikipedia_url": "http://en.wikipedia.org/wiki/University_of_Paris_III:_Sorbonne_Nouvelle",
+    "email_address": "",
+    "links": ["http://www.univ-paris3.fr/"],
+    "aliases": [],
+    "acronyms": [],
+    "types": ["Education"],
+    "ip_addresses": [],
+    "addresses": [{
+        "line_1": "",
+        "line_2": "",
+        "line_3": null,
+        "lat": 48.839792,
+        "lng": 2.353902,
+        "postcode": "",
+        "primary": false,
+        "city": "Paris",
+        "state": null,
+        "state_code": "",
+        "country": "France",
+        "country_code": "FR",
+        "geonames_city": {
+            "id": 2988507,
+            "city": "Paris",
+            "nuts_level1": {
+                "name": "ÎLE DE FRANCE",
+                "code": "FR1"
+            },
+            "nuts_level2": {
+                "name": "Île de France",
+                "code": "FR10"
+            },
+            "nuts_level3": {
+                "name": "Paris",
+                "code": "FR101"
+            },
+            "geonames_admin1": {
+                "name": "Île-de-France",
+                "ascii_name": "Ile-de-France",
+                "code": "FR.11"
+            },
+            "geonames_admin2": {
+                "name": "Paris",
+                "ascii_name": "Paris",
+                "code": "FR.11.75"
+            },
+            "license": {
+                "attribution": "Data from geonames.org under a CC-BY 3.0 license",
+                "license": "http://creativecommons.org/licenses/by/3.0/"
+            }
+        }
+    }],
+    "labels": [{
+        "label": "Université de la Sorbonne Nouvelle",
+        "iso639": "fr"
+    }],
+    "id": "grid.17689.31",
+    "status": "active",
+    "established": 1971,
+    "relationships": [{
+        "type": "Child",
+        "label": "Centre de Recherche et de Documentation sur les Amériques",
+        "id": "grid.503120.5"
+    }, {
+        "type": "Child",
+        "label": "Centre de Recherche sur les Liens Sociaux",
+        "id": "grid.470340.4"
+    }, {
+        "type": "Child",
+        "label": "Centre d’études et de Recherches sur l’espace Germanophone",
+        "id": "grid.503096.9"
+    }, {
+        "type": "Child",
+        "label": "Communication, Information, Médias",
+        "id": "grid.503273.0"
+    }, {
+        "type": "Child",
+        "label": "Laboratoire de Phonétique et Phonologie",
+        "id": "grid.463967.9"
+    }, {
+        "type": "Child",
+        "label": "Langues, Textes, Traitements informatiques, Cognitio",
+        "id": "grid.464017.0"
+    }, {
+        "type": "Child",
+        "label": "Mondes Iranien et Indien",
+        "id": "grid.462667.7"
+    }, {
+        "type": "Child",
+        "label": "Théorie et Histoire des Arts et des Littératures de la Modernité",
+        "id": "grid.462801.9"
+    }, {
+        "type": "Child",
+        "label": "Typologie et Universaux Linguistiques",
+        "id": "grid.482755.9"
+    }],
+    "external_ids": {
+        "ISNI": {
+            "preferred": null,
+            "all": ["0000 0004 1937 060X"]
+        },
+        "Wikidata": {
+            "preferred": null,
+            "all": ["Q571293"]
+        },
+        "ROR": {
+            "preferred": "https://ror.org/03z6jp965",
+            "all": ["https://ror.org/03z6jp965"]
+        }
+    },
+    "weight": 1
+}
+]
