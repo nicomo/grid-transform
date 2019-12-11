@@ -31,63 +31,73 @@ var generateCmd = &cobra.Command{
 	Short: "generate a dgraph compatible json file",
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("generate called")
-		genDgraphJSON()
+
+		// read json source file
+		iFile, err := os.Open("json-source-example.json")
+		if err != nil {
+			log.Fatal(err)
+		}
+		defer iFile.Close()
+
+		// prepare output
+		oFile, err := os.Create("grid-dgraph.json")
+		if err != nil {
+			log.Fatalln(err)
+		}
+		enc := json.NewEncoder(oFile)
+
+		// decode input file
+		dec := json.NewDecoder(iFile)
+
+		// read & discard open bracket from src
+		// write one to output
+		_, err = dec.Token()
+		if err != nil {
+			log.Fatal(err)
+		}
+		_, err = oFile.WriteString("[\n")
+
+		// while the array contains values
+		for dec.More() {
+
+			// decode json into input struct
+			instSrc := InstituteSource{}
+			err := dec.Decode(&instSrc)
+			if err != nil {
+				log.Fatal(err)
+			}
+
+			//transform into target struct
+			instT := transform(instSrc)
+
+			// write to file
+			if err = enc.Encode(instT); err != nil {
+				log.Fatalln(err)
+			}
+
+			// add separator before next json object
+			_, err = oFile.WriteString(",\n")
+		}
+
+		/*
+			TODO:  remove ',' after last json object, see doc for
+			oFile.Seek()
+			oFile.Truncate()
+		*/
+
+		// add closing delim ] to file
+		_, err = oFile.WriteString("]\n")
+
+		oFile.Sync()
 	},
 }
 
 func init() {
 	rootCmd.AddCommand(generateCmd)
-
-	// Here you will define your flags and configuration settings.
-
-	// Cobra supports Persistent Flags which will work for this command
-	// and all subcommands, e.g.:
-	// generateCmd.PersistentFlags().String("foo", "", "A help for foo")
-
-	// Cobra supports local flags which will only run when this command
-	// is called directly, e.g.:
-	// generateCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
 
-func genDgraphJSON() {
-
-	// 1. read json source file
-	file, err := os.Open("json-source-example.json")
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer file.Close()
-
-	//TODO: create target JSON File
-
-	// decode source file
-	dec := json.NewDecoder(file)
-
-	// read & discard open bracket
-	_, err = dec.Token()
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	// while the array contains values
-	for dec.More() {
-
-		// decode json into struct
-		instSrc := InstituteSource{}
-		err := dec.Decode(&instSrc)
-		if err != nil {
-			log.Fatal(err)
-		}
-
-		//transform into target JSON
-		instT := transform(instSrc)
-		fmt.Printf("%+v\n", instT)
-
-		// add to target JSON file
-
-	}
-}
-
+// transform takes the unmarshalled source
+// and transforms it into our target struct
 func transform(instSrc InstituteSource) InstituteTarget {
 
 	// create target struct, init with flat values
